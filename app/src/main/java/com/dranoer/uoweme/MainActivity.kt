@@ -5,7 +5,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.dranoer.uoweme.ui.theme.UoweMETheme
@@ -17,7 +16,7 @@ class MainActivity : ComponentActivity() {
             UoweMETheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
+                    ExpenseList()
                 }
             }
         }
@@ -25,14 +24,14 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+fun ExpenseList() {
+
 }
 
-@Preview(showBackground = true)
+@Preview
 @Composable
-fun DefaultPreview() {
+fun ExpenseListPreview() {
     UoweMETheme {
-        Greeting("Android")
+        ExpenseList()
     }
 }
